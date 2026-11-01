@@ -1,0 +1,30 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:12.4
+    container_name: jellyfin
+    restart: unless-stopped
+
+    ports:
+      - "192.168.10.20:8096:8096"
+
+    volumes:
+      - /srv/jellyfin/config:/config
+      - /srv/jellyfin/cache:/cache
+
+      # Main media tree is read-only.
+      - /srv/media:/media:ro
+
+      # Example of a deliberately writable sub-tree.
+      - /srv/media/Music:/media/Music:rw
+
+    environment:
+      NVIDIA_DRIVER_CAPABILITIES: all
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities:
+                - gpu
