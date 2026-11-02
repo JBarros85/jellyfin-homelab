@@ -52,6 +52,7 @@ The project focuses on:
 See:
 
 - [Architecture](docs/architecture.md)
+- [NVIDIA Hardware Transcoding](docs/hardware-transcoding.md)
 - [Docker Compose example](docker/docker-compose.example.yml)
 
 ## Storage Model
