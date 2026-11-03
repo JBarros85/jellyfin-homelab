@@ -53,6 +53,7 @@ See:
 
 - [Architecture](docs/architecture.md)
 - [NVIDIA Hardware Transcoding](docs/hardware-transcoding.md)
+- [Storage and Borg Backup Strategy](docs/storage-backup-strategy.md)
 - [Docker Compose example](docker/docker-compose.example.yml)
 
 ## Storage Model
