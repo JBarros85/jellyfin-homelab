@@ -54,6 +54,7 @@ See:
 - [Architecture](docs/architecture.md)
 - [NVIDIA Hardware Transcoding](docs/hardware-transcoding.md)
 - [Storage and Borg Backup Strategy](docs/storage-backup-strategy.md)
+- [Reverse Proxy and HTTPS Access](docs/reverse-proxy-external-access.md)
 - [Docker Compose example](docker/docker-compose.example.yml)
 
 ## Storage Model
