@@ -55,6 +55,7 @@ See:
 - [NVIDIA Hardware Transcoding](docs/hardware-transcoding.md)
 - [Storage and Borg Backup Strategy](docs/storage-backup-strategy.md)
 - [Reverse Proxy and HTTPS Access](docs/reverse-proxy-external-access.md)
+- [Jellyfin DDNS Outage — Root Cause and Recovery](docs/incidents/2026-11-01-jellyfin-ddns-outage.md)
 - [Docker Compose example](docker/docker-compose.example.yml)
 
 ## Storage Model
