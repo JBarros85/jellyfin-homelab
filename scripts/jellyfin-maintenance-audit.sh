@@ -85,31 +85,9 @@ printf 'enabled='
 systemctl is-enabled noip-duc 2>/dev/null || true
 
 echo
-echo "=== JELLYFIN LOG KEYWORD COUNTS (24H) ==="
+echo "=== JELLYFIN ERR/FTL AUDIT (72H) ==="
 
-docker logs --since 24h jellyfin 2>&1 |
-awk '
-{
-    line = tolower($0)
-
-    if (line ~ /error|exception|critical|fatal/) {
-        total++
-
-        if ($0 ~ /\[ERR\]/)
-            err++
-        else if ($0 ~ /\[INF\]/)
-            inf++
-        else
-            other++
-    }
-}
-END {
-    printf "ERR=%d\n", err
-    printf "INF=%d\n", inf
-    printf "OTHER=%d\n", other
-    printf "TOTAL_MATCHES=%d\n", total
-}
-'
+python3 "$(dirname "${BASH_SOURCE[0]}")/jellyfin-log-audit.py" || exit 1
 
 echo
 echo "=== UNHEALTHY CONTAINERS ==="

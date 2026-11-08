@@ -132,11 +132,15 @@ Total matches:   8
 
 A keyword match is not equivalent to a confirmed application error.
 
-The actual message behind the ERR entry was not inspected during
-this audit and remains an open investigation item.
+A follow-up investigation on November 8 classified three ERR
+entries over a 72-hour period as Trickplay image-generation
+failures involving System.ObjectDisposedException.
 
-The other matches must not automatically be classified as harmless
-without inspecting their context.
+They occurred during Borg backup windows. A shutdown-related
+interaction is plausible but remains unproven.
+
+The maintenance audit now uses a dedicated severity-aware analyzer
+rather than relying on error-related keywords.
 
 ## 6. GPU Monitoring
 
@@ -476,8 +480,9 @@ Reverse proxy healthy
 DDNS updater active
 ```
 
-One application ERR log entry remains unclassified and should
-be investigated separately.
+The subsequent Trickplay investigation documented recurring
+ERR entries during backup windows without claiming a proven
+root cause.
 
 Future maintenance should preserve the separation between
 observation, diagnosis, changes and validation.
