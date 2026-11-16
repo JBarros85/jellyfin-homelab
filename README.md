@@ -60,6 +60,7 @@ See:
 - [Trickplay Errors During Backup Windows](docs/incidents/2026-11-08-trickplay-backup-correlation.md)
 - [Jellyfin NVIDIA NVML GPU Recovery](docs/incidents/2026-11-11-jellyfin-nvml-gpu-recovery.md)
 - [Backup Recovery and Disaster Recovery Runbook](docs/jellyfin-recovery-runbook.md)
+- [Borg Archive Verification](docs/borg-archive-verification.md)
 - [Docker Compose example](docker/docker-compose.example.yml)
 
 ## Storage Model
